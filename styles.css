@@ -1,0 +1,53 @@
+/*
+  Name: Catherine Lien
+  Date: April 18, 2020
+  Section: CSE 154 AI
+  TA: Andrew Guterman
+
+  This is the styles.css page for my creative project 2, my pomodoro timer. It
+  is the main style of the page.
+*/
+
+body {
+  background-color: pink;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  margin-left: 80px;
+  margin-right: 80px;
+  font-family: 'Poppins', sans-serif;
+}
+
+p {
+  font-size: 20px;
+}
+
+footer {
+  font-size: 12px;
+}
+
+#clock {
+  font-size: 50px;
+  padding: 20px;
+  border: 5px solid hotpink;
+}
+
+#options {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  align-items: center;
+  border: 5px solid white;
+}
+
+#options img {
+  width: 400px;
+  height: 400px;
+}
+
+#options div {
+  padding: 50px;
+}
+
+.hidden {
+  display: none;
+}
