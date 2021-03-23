@@ -17,8 +17,14 @@
     let startButton = id("start");
     let enterButton = id("enter");
     let clearButton = id("clear");
+    let taskInput = id("task");
     startButton.addEventListener("click", startTimer);
     enterButton.addEventListener("click", addList);
+    taskInput.addEventListener("keyup", function(event) {
+      if(event.keyCode == 13) {
+        enterButton.click();
+      }
+    });
     clearButton.addEventListener("click", clearList);
   }
 
