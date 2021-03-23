@@ -94,9 +94,12 @@
 
   /**
    * Displays a message when the timer is over on the page for 3 seconds and hides the
-   * timer after.
+   * timer after. Plays the alert sound.
    */
   function timeUp() {
+    //window.alert("Time is up!");
+    var alert = new Audio("kalimba_alert.mp3");
+    alert.play();
     const THREE_SECONDS = 3000;
     let timerDone = gen("p");
     timerDone.textContent = "Time is up!";
