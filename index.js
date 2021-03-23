@@ -113,6 +113,7 @@
       let taskNode = gen("li");
       taskNode.textContent = id("task").value;
       qs("ol").appendChild(taskNode);
+      id("task").value = "";
     }
   }
 
