@@ -31,6 +31,15 @@ footer {
   border: 5px solid hotpink;
 }
 
+#intervals {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 300px;
+}
+
+
+
 #options {
   display: flex;
   flex-direction: row;
@@ -42,6 +51,12 @@ footer {
 #options img {
   width: 400px;
   height: 400px;
+}
+
+#intervals img {
+  width: 100px;
+  height: 100px;
+  flex-basis: 25%;
 }
 
 #options div {

@@ -21,6 +21,8 @@
     let taskInput = id("task");
     let fiveButton = id("five");
     let thirtyButton = id("thirty");
+    let intervalButton = id("tomato");
+    let clearIntervalButton = id("tomato-clear");
     startButton.addEventListener("click", function() {
       duration = id("time").value;
       startTimer();
@@ -39,7 +41,9 @@
       duration = 30;
       startTimer();
     });
+    intervalButton.addEventListener("click", addInterval);
     clearButton.addEventListener("click", clearList);
+    clearIntervalButton.addEventListener("click", clearIntervals);
   }
 
   /**
@@ -131,6 +135,16 @@
       qs("ol").appendChild(taskNode);
       id("task").value = "";
     }
+  }
+
+  function addInterval() {
+    let tomatoImg = gen("img");
+    tomatoImg.src = "tomato-cute.png";
+    id("intervals").appendChild(tomatoImg);
+  }
+
+  function clearIntervals() {
+    id("intervals").innerHTML = "";
   }
 
   /** Clears the task list on the page.*/
