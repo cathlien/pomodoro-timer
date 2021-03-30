@@ -11,6 +11,7 @@
 (function() {
 
   window.addEventListener("load", init);
+  let duration;
 
   /** Adds event handlers to all the buttons on the page.*/
   function init() {
@@ -18,12 +19,25 @@
     let enterButton = id("enter");
     let clearButton = id("clear");
     let taskInput = id("task");
-    startButton.addEventListener("click", startTimer);
+    let fiveButton = id("five");
+    let thirtyButton = id("thirty");
+    startButton.addEventListener("click", function() {
+      duration = id("time").value;
+      startTimer();
+    });
     enterButton.addEventListener("click", addList);
     taskInput.addEventListener("keyup", function(event) {
       if(event.keyCode == 13) {
         enterButton.click();
       }
+    });
+    fiveButton.addEventListener("click", function() {
+      duration = 5;
+      startTimer();
+    });
+    thirtyButton.addEventListener("click", function() {
+      duration = 30;
+      startTimer();
     });
     clearButton.addEventListener("click", clearList);
   }
@@ -34,9 +48,8 @@
    * timer.
    */
   function startTimer() {
-    const DURATION = id("time").value;
-    if (validNumber(DURATION)) {
-      createTimer(DURATION);
+    if (validNumber(duration)) {
+      createTimer(duration);
     } else {
       displayWarning();
     }
